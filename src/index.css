@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Custom scrollbar - ChatGPT style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Prose overrides for dark theme */
+.prose {
+  color: #e5e5e5;
+}
+
+.prose strong {
+  color: #ffffff;
+}
+
+.prose a {
+  color: #60a5fa;
+}
+
+.prose a:hover {
+  color: #93c5fd;
+}
+
+.prose code {
+  color: #e5e5e5;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.prose pre {
+  background: #1a1a1a !important;
+  border: 1px solid #2a2a2a;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.8125rem;
+}
+
+/* Textarea auto-resize */
+textarea {
+  field-sizing: content;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+}
+
+/* Smooth transitions */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Code block hover effect */
+.code-block-wrapper:hover .code-copy-btn {
+  opacity: 1;
+}
+
+/* Message animation */
+.message-enter {
+  animation: fade-in 0.2s ease-out;
+}
+
